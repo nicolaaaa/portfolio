@@ -3,12 +3,44 @@
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .icons-show-inside {
+    display: inline;
+  }
+
+  .icons-show-outside {
+    display: none;
+  }
+
+  .text-show-inside {
+    display: inline;
+  }
+
+  .text-show-outside {
+    display: none;
+  }
 }
 
 //Desktops
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .icons-show-inside {
+    display: none;
+  }
+
+  .icons-show-outside {
+    display: inline;
+  }
+
+  .text-show-inside {
+    display: inline;
+  }
+
+  .text-show-outside {
+    display: none;
   }
 }
 
@@ -67,6 +99,22 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .icons-show-inside {
+    display: none;
+  }
+
+  .icons-show-outside {
+    display: inline;
+  }
+
+  .text-show-inside {
+    display: none;
+  }
+
+  .text-show-outside {
+    display: inline;
+  }
 }
 
 //Smartphones
@@ -77,5 +125,21 @@
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .icons-show-inside {
+    display: none;
+  }
+
+  .icons-show-outside {
+    display: inline;
+  }
+
+  .text-show-inside {
+    display: none;
+  }
+
+  .text-show-outside {
+    display: inline;
   }
 }

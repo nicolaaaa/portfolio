@@ -91,24 +91,28 @@
 * {
   box-sizing: border-box; }
 
+html {
+  height: 100%; }
+
 body {
   background: #444;
   color: white;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin: 0; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url(../img/bg-blue.png);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
-      height: 100%;
+      min-height: 100%;
       z-index: -1;
       background: rgba(68, 68, 68, 0.8); }
 
@@ -117,16 +121,11 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
-    font-size: 6rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    padding: 0.2rem 1rem; }
 
 a {
   color: white;
@@ -140,9 +139,67 @@ header {
 .text-secondary {
   color: #3686bb; }
 
+#grid {
+  max-width: 50%;
+  height: 90%;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  padding-inline-start: 0; }
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+#grid li {
+  list-style-type: none;
+  left: 0;
+  width: 80%;
+  padding: 0 0 92.37875288683603% 0;
+  -o-transform: rotate(-60deg) skewY(30deg);
+  -moz-transform: rotate(-60deg) skewY(30deg);
+  -webkit-transform: rotate(-60deg) skewY(30deg);
+  -ms-transform: rotate(-60deg) skewY(30deg);
+  transform: rotate(-60deg) skewY(30deg);
+  overflow: hidden;
+  visibility: hidden; }
+
+#grid li:not(.icons-show-inside):not(.text-show-inside) {
+  visibility: visible; }
+
+#grid li .hexagon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #444;
+  -o-transform: skewY(-30deg) rotate(60deg);
+  -moz-transform: skewY(-30deg) rotate(60deg);
+  -webkit-transform: skewY(-30deg) rotate(60deg);
+  -ms-transform: skewY(-30deg) rotate(60deg);
+  transform: skewY(-30deg) rotate(60deg);
+  overflow: hidden; }
+
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px); }
+  min-height: calc(100vh - 60px);
+  text-align: center; }
+  main .text-show-inside {
+    overflow: hidden;
+    font-size: 1.5vw; }
+    main .text-show-inside h1 {
+      font-size: 7vw;
+      margin-top: 9vw;
+      line-height: 1em; }
+  main .text-show-outside {
+    overflow: hidden;
+    font-size: 2vw; }
+    main .text-show-outside h1 {
+      font-size: 8.5vw;
+      margin-top: 2vw;
+      line-height: 1em; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -150,10 +207,6 @@ main {
       main .icons a:hover {
         color: #3686bb;
         transition: all 0.5s ease-out; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
 
 .about-info {
   display: grid;
@@ -238,11 +291,27 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .icons-show-inside {
+    display: inline; }
+  .icons-show-outside {
+    display: none; }
+  .text-show-inside {
+    display: inline; }
+  .text-show-outside {
+    display: none; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .icons-show-inside {
+    display: none; }
+  .icons-show-outside {
+    display: inline; }
+  .text-show-inside {
+    display: inline; }
+  .text-show-outside {
+    display: none; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -273,10 +342,26 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .icons-show-inside {
+    display: none; }
+  .icons-show-outside {
+    display: inline; }
+  .text-show-inside {
+    display: none; }
+  .text-show-outside {
+    display: inline; } }
 
 @media screen and (max-width: 500px) {
   main#hom h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .icons-show-inside {
+    display: none; }
+  .icons-show-outside {
+    display: inline; }
+  .text-show-inside {
+    display: none; }
+  .text-show-outside {
+    display: inline; } }
