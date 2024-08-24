@@ -1,112 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>About Me</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css"/>
     <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
     />
-  </head>
-  <body>
-    <header>
-      <div class="menu-btn">
+</head>
+<body>
+<header>
+    <div class="menu-btn">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
-      </div>
-      <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait">
-            <img src="../dist/img/portraitSquare.jpg" />
-          </div>
-        </div>
-        <ul class="menu-nav">
-          <li class="nav-item ">
-            <a href="index.html" class="nav-link">
-              Home
-            </a>
-          </li>
-          <li class="nav-item current">
-            <a href="about.html" class="nav-link">
-              About
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link">
-              My Work
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">
-              How To Reach Me
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </div>
 
+    <div id="menu"></div>
+</header>
+
+<div class="container">
     <main id="about">
-      <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
-      <h2 class="sm-heading">
-        Let me tell you a few things
-      </h2>
-      <div class="about-info">
-        <img src="img/portrait3Square.png" alt="Nicola" class="bio-image" />
+        <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
 
-        <div class="bio">
-          <h3 class="text-secondary">BIO</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Repudiandae provident accusamus ipsum ut tenetur animi excepturi
-            voluptates, at aperiam magnam omnis consequuntur earum. Dolor error
-            aliquid beatae quaerat earum molestiae!
-          </p>
-        </div>
+        <div class="about-info">
+            <div class="bio">
+<!--                <p>-->
+                    <h6>
+                    <span id="age">?</span> old and currently living in Berlin. Working in Web-development as a
+                    Full-stack engineer, but always interested in cool job opportunities. Especially in
+                    small companies and/or jobs that allow me to travel or live and work in another country for a while.
+            </h6>
+<!--                </p>-->
+            </div>
 
-        <div class="job job-1">
-          <h3>Bachelorstudium</h3>
-          <h6>Humboldt Universität Berlin</h6>
-          <p>
-            Hauptfach: Informatik Nebenfach: Asien-/Afrikawissenschaften Fokus:
-            - Mensch-Computer Interaktion - Robotik - künstliche Intelligenz -
-            Software Development
-          </p>
-        </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#studium">Studies</a></li>
+<!--                    <li><a href="#jobs">Jobs</a></li>-->
+<!--                    <li><a href="#sprachen">Languages and time abroad</a></li>-->
+                </ul>
+            </nav>
 
-        <div class="job job-2">
-          <h3>Design ABC</h3>
-          <h6>Assistant</h6>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ab
-            laborum officiis, laboriosam vel porro placeat magnam, soluta
-            accusantium et dicta. Perspiciatis vero minus et, quidem accusantium
-            magnam. Fugit, culpa!
-          </p>
-        </div>
+            <div class="outerbox">
+            <div class="uni box">
+                <div class="uni-1">
+                    <section id="uni">
+                        <h3>Master studies in Computer Science</h3>
+                        <h6>Humboldt Universität Berlin</h6>
+                        <h6>2018-2021</h6>
+                    </section>
+                </div>
+                <div class="uni-2">
+                    <p>
+                        <strong>Focus</strong> Machine Learning, Artificial Intelligence, Distributed Systems
+                        <br>
+                        <strong>Master Thesis</strong> Implementing a highly adaptable notification service in a
+                        Microservice
+                        architecture
+                    </p>
+                </div>
+            </div>
 
-        <div class="job job-3">
-          <h3>Whatever</h3>
-          <h6>Boss</h6>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ab
-            laborum officiis, laboriosam vel porro placeat magnam, soluta
-            accusantium et dicta. Perspiciatis vero minus et, quidem accusantium
-            magnam. Fugit, culpa!
-          </p>
+
+            <div class="uni box">
+                <div class="uni-1">
+                    <section>
+                        <h3>Bachelor studies in Computer Science</h3>
+                        <h6>Humboldt Universität Berlin</h6>
+                        <h6>2014-2018</h6>
+                    </section>
+                </div>
+                <div class="uni-2">
+                    <p>
+                        <strong>Focus</strong> Design Principles, Computer-Supported Cooperative Work,
+                        Database Systems
+                        <br>
+                        <strong>Minor</strong> Asia-/Africa studies (Chinese Language and Culture)
+                        <br>
+                        <strong>Bachelor Thesis</strong> Peer-Assessment in vocabulary learning via mobile applications
+                    </p>
+                </div>
+            </div>
+            </div>
+
+            <nav class="navbar">
+                <ul>
+<!--                    <li><a href="#studium">Studies</a></li>-->
+                                        <li><a href="#jobs">Jobs</a></li>
+                    <!--                    <li><a href="#sprachen">Languages and time abroad</a></li>-->
+                </ul>
+            </nav>
+            <div class="outerbox">
+            <div class="job box">
+                <div class="job-1">
+                    <section id="jobs">
+                        <h3>Senior Full-Stack Developer</h3>
+                        <h6>DAPARTO GmbH</h6>
+                        <h6>currently</h6>
+                    </section>
+                </div>
+                <div class="job-2">
+                    <p>
+                        <strong>Improving the existing E-commerce system including</strong></p>
+                    <ul>
+                        <li>Developing a content management system</li>
+                        <li>Improving the speed of search and data processing functions</li>
+                        <li>Implementing and evaluation of new customer features (A/B testing)</li>
+                        <li>Tech-stack: Microservice application (Docker) with services in PHP, Java, Python, Vue.js</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job box">
+                <div class="job-1">
+                    <section >
+                        <h3>Full-Stack Developer</h3>
+                        <h6>Hire a doctor group</h6>
+                        <h6>2019-2023</h6>
+                    </section>
+                </div>
+                <div class="job-2">
+                    <p>
+                        <strong>Development of the customer management system including</strong></p>
+                        <ul>
+                    <li>Integration of new features for mail and pdf creation</li>
+                    <li>Re-engineered the database structure</li>
+                    <li>Transitioned legacy PHP applications to a modern MVC framework</li>
+                    <li>Setting up a continuous deployment pipeline, coupled with automated testing</li>
+                    <li>Tech-stack: PHP and Vue.js with docker</li>
+                </ul>
+
+                </div>
+            </div>
+            </div>
+
+
+<!--            <div class="sprachen">-->
+<!--                <div class="sprachen-1">-->
+<!--                    <section id="sprachen">-->
+<!--                        <h3>Whatever</h3>-->
+<!--                        <h6>Boss</h6>-->
+<!--                    </section>-->
+<!--                </div>-->
+<!--                <div class="sprachen-2">-->
+<!--                    <p>-->
+<!--                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ab-->
+<!--                        laborum officiis, laboriosam vel porro placeat magnam, soluta-->
+<!--                        accusantium et dicta. Perspiciatis vero minus et, quidem-->
+<!--                        accusantium magnam. Fugit, culpa!-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
         </div>
-      </div>
     </main>
+</div>
 
-    <footer id="main-footer">
-      Copyright &copy; 2019
-    </footer>
 
-    <script src="../js/main.js"></script>
-  </body>
+<script src="../js/main.js"></script>
+</body>
 </html>

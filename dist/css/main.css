@@ -208,43 +208,98 @@ main {
         color: #3686bb;
         transition: all 0.5s ease-out; }
 
+.container {
+  width: 100%;
+  height: 100%;
+  /* CSS Smooth Scroll */
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; }
+
 .about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
-    width: 250px;
-    height: 250px;
-    grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: #3686bb 3px solid; }
+  width: 100%;
+  height: 100%;
+}
+  .about-info .navbar {
+    display: flex;
+    grid-area: nav;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7); }
+  .about-info .navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center; }
+  .about-info .navbar ul li {
+    margin: 0 1rem;}
+  .about-info .navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4; }
+  .about-info .navbar ul li a:hover {
+    color: skyblue; }
   .about-info .bio {
-    grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
-  .about-info .job {
+  .about-info .box{
     background: #515151;
     padding: 0.5rem;
     border-bottom: #3686bb 5px solid; }
+.about-info .outerbox{
+  margin-bottom: 20px;
+border: #0d0e0e 5px solid; }
+  .about-info .box strong {
+    color: #3686bb; }
+  .about-info .box ul{
+    list-style-type: none;}
+
 
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.7rem; }
-  .projects img {
-    width: 100%;
-    border: 3px white solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #3686bb;
-      transition: all 0.5s ease-out; }
+  grid-gap: 0.7rem;
+}
+.projects .item ul{
+  list-style-type: none;
+}
+
+.projects .item {
+  position: relative; /* Relative positioning for containing the absolutely positioned overlay */
+  overflow: hidden; /* Ensure content doesn't overflow outside the container */
+}
+
+.projects img {
+  width: 100%;
+  border: 3px solid white;
+  transition: all 0.5s ease-out;
+}
+
+.projects .item:hover img{
+  opacity: 0.2;
+  border-color: #3686bb;
+}
+
+.projects .overlay-text {
+  position: absolute;
+  top: 0; /* Align text to the top */
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%; /* Ensure the text block takes full width */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  font-size: clamp(12px, 1.5vw, 18px); /* Responsive text size */
+  max-height: 100%; /* Ensure text doesn't overflow out of the image */
+  overflow-y: auto; /* Add scrolling if text is too long */
+}
+
+.projects .item:hover .overlay-text {
+  opacity: 1;
+}
+
 
 .boxes {
   display: flex;
@@ -339,7 +394,11 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage"
+ "bio"
+ "job1"
+ "job2"
+ "job3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
